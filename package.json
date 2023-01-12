@@ -1,30 +1,96 @@
 {
-	"name": "universalapp",
-	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"start": "expo start",
-		"android": "expo start --android",
-		"ios": "expo start --ios",
-		"web": "expo start --web"
-	},
-	"dependencies": {
-		"@expo/webpack-config": "^0.17.2",
-		"expo": "~47.0.12",
-		"expo-status-bar": "~1.4.2",
-		"native-base": "^3.4.25",
-		"react": "18.1.0",
-		"react-dom": "18.1.0",
-		"react-native": "0.70.5",
-		"react-native-safe-area-context": "4.4.1",
-		"react-native-svg": "13.4.0",
-		"react-native-web": "~0.18.9"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.12.9",
-		"@types/react": "~18.0.14",
-		"@types/react-native": "~0.70.6",
-		"typescript": "^4.6.3"
-	},
-	"private": true
+  "name": "solleroen",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "pnpm -r --parallel test",
+    "tsc": "pnpm run typecheck",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "lint": "pnpm -r --parallel lint",
+    "updateDependencies": "npx npm-check-updates -u"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.20.6",
+    "luxon": "3.1.1",
+    "react-native-svg": "*",
+    "uuid": "^9.0.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/jest": "28.1.6",
+    "@types/luxon": "3.1.0",
+    "@types/uuid": "9.0.0",
+    "eslint": "^8.29.0",
+    "jest-config": "27.5.1",
+    "jest-environment-jsdom": "27.5.1",
+    "jest-environment-node": "27.5.1",
+    "react-native-svg-transformer": "^1.0.0",
+    "ts-jest": "27.1.4",
+    "typescript": "4.9.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/runtime": "7.20.6",
+      "@react-native-async-storage/async-storage": "1.17.11",
+      "@reduxjs/toolkit": "1.9.1",
+      "@rtk-query/graphql-request-base-query": "2.2.0",
+      "@types/react-native": "^0.70.6",
+      "@types/react-test-renderer": "18.0.0",
+      "@types/react": "18.0.26",
+      "amazon-cognito-identity-js": "^6.0.1",
+      "aws-amplify": "5.0.5",
+      "expo": "47.0.8",
+      "graphql-request": "4.3.0",
+      "graphql-tag": "2.12.6",
+      "graphql": "15.8.0",
+      "i18next": "22.1.5",
+      "native-base": "3.4.25",
+      "next": "13.0.7",
+      "react-dom": "18.1.0",
+      "react-i18next": "12.1.1",
+      "react-native-keyboard-aware-scroll-view": "0.9.5",
+      "react-native-reanimated": "2.13.0",
+      "react-native-safe-area-context": "4.4.1",
+      "react-native-svg": "13.4.0",
+      "react-native-vector-icons": "^9.2.0",
+      "react-native-web": "0.18.9",
+      "react-native": "0.70.5",
+      "react-redux": "8.0.5",
+      "react-test-renderer": "18.1.0",
+      "react": "18.1.0",
+      "redux-persist": "^6.0.0",
+      "redux-thunk": "^2.4.2",
+      "redux": "^4.2.0",
+      "solito": "2.0.8",
+      "styled-components": "5.3.6",
+      "styled-system": "5.1.5",
+      "@react-navigation/bottom-tabs": "6.5.0",
+      "@react-navigation/native": "6.1.0",
+      "@react-navigation/elements": "1.3.10"
+    },
+    "packageExtensions": {
+      "@expo/next-adapter": {
+        "peerDependencies": {
+          "next": "12.2.6",
+          "react-native-web": "0.17.7"
+        }
+      },
+      "@native-base/next-adapter": {
+        "dependencies": {
+          "next": "13.0.7",
+          "react-native-web": "0.17.7"
+        }
+      },
+      "eslint-config-next": {
+        "dependencies": {
+          "next": "13.0.7"
+        }
+      },
+      "@aws-amplify/auth": {
+        "dependencies": {
+          "amazon-cognito-identity-js": null
+        }
+      }
+    }
+  }
 }
