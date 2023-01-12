@@ -13,8 +13,8 @@ config.watchFolders = [workspaceRoot];
 config.resolver.disableHierarchicalLookup = true;
 // #2 - Try resolving with project modules first, then workspace modules
 config.resolver.nodeModulesPaths = [
-  //path.resolve(projectRoot, 'node_modules'),
-  path.resolve(workspaceRoot, 'node_modules'),
+	path.resolve(projectRoot, 'node_modules'),
+	path.resolve(workspaceRoot, 'node_modules'),
 ];
 
 module.exports = config;
